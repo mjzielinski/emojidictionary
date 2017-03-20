@@ -99,6 +99,7 @@
 				TargetAttributes = {
 					E420AE641E803C1F00AEC57E = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 2S5K2NTHW4;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -264,7 +265,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2S5K2NTHW4;
 				INFOPLIST_FILE = "Emoji Dictionary/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.worldengine.Emoji-Dictionary";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -276,7 +279,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2S5K2NTHW4;
 				INFOPLIST_FILE = "Emoji Dictionary/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.worldengine.Emoji-Dictionary";
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -40,15 +40,15 @@ class DefinitionViewController: UIViewController {
             break
         case "😂":
             emojiTitle.text = "Crying Laughing"
-            emojiDefine.text = "Use when something is so funny you are crying and laughing."
+            emojiDefine.text = "Use when you are crying from laughter."
             break
         case "😅":
             emojiTitle.text = "Sweating"
-            emojiDefine.text = "Use when you were nervous about something and sweating, but now are relieved."
+            emojiDefine.text = "Use when you sweat in relief."
             break
         case "🤐":
             emojiTitle.text = "Not Talking"
-            emojiDefine.text = "Use when you are not allowed to talk about something."
+            emojiDefine.text = "Use when you are not allowed to talk."
             break
         case "😎":
             emojiTitle.text = "Cool Sunglasses"

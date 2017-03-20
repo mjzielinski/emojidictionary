@@ -47,6 +47,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     //* from navigation created segue moveSegue, added this function with didSelectRowAt
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //* don't leave last tap selected
+        tableView.deselectRow(at: indexPath, animated: true)
         //* added performSegue assign emoji as sender
         performSegue(withIdentifier: "moveSegue", sender: emojis[indexPath.row])
     }
