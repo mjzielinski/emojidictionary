@@ -14,11 +14,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     //* table view outlet
     @IBOutlet weak var tableView: UITableView!
     
-    //* an array of emojis
+    //* an array of emojis and descriptions
     var emojis = ["😀","😂","😅","😎","🤐","👽","🤖","👿"]
     var emojiDesc =
         ["Smiley", "Crying Laughing", "Sweating", "Cool Sunglasses", "Not Talking", "Alien", "Robot", "Evil Purple"]
-    
     
     
     override func viewDidLoad() {
@@ -58,7 +57,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     //* add prepare for segue to get next view controller ready
     //* Added DefinitionViewController Class
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         //* create constant holding new view controller
         let defVC = segue.destination as! DefinitionViewController
         //* assign sender to emoji var in new view controller

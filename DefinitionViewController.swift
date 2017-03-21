@@ -16,7 +16,6 @@ class DefinitionViewController: UIViewController {
     
     //* connect emoji label to var emojilabel
     @IBOutlet weak var emojiLabel: UILabel!
-    
     //* title for the emoji
     @IBOutlet weak var emojiTitle: UILabel!
     //* definition for the emoji
@@ -27,12 +26,12 @@ class DefinitionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //* when the view loads, the emoji, label, and def will be set here
         
         //* use the emoji variable to set emojilabel
         emojiLabel.text = emoji
         
         //* use switch statement to assign title and definition
-        
         switch emoji {
         case "😀":
             emojiTitle.text = "Smiley"
@@ -70,8 +69,6 @@ class DefinitionViewController: UIViewController {
             emojiTitle.text = ""
             emojiDefine.text = ""
         }
-        
-        
         
     }
     
