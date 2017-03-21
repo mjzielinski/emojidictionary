@@ -14,11 +14,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     //* table view outlet
     @IBOutlet weak var tableView: UITableView!
     
-    //* an array of emojis and descriptions
-    var emojis = ["😀","😂","😅","😎","🤐","👽","🤖","👿"]
-    var emojiDesc =
-        ["Smiley", "Crying Laughing", "Sweating", "Cool Sunglasses", "Not Talking", "Alien", "Robot", "Evil Purple"]
-    
+    // get the array of Emoji objects
+    var emojis = makeEmojiArray()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,8 +35,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //* set up UITableViewCell to return
         let cell = UITableViewCell()
-        //* assign emoji from array to cell textLabel using indexPath.row
-        cell.textLabel?.text = emojis[indexPath.row] + "   " + emojiDesc[indexPath.row]
+        //* assign emoji from array to cell text
+        cell.textLabel?.text = emojis[indexPath.row].icon + "   " + emojis[indexPath.row].title
         //* return the cell
         return cell
     }
@@ -48,7 +45,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //* don't leave last tap selected
         tableView.deselectRow(at: indexPath, animated: true)
-        //* added performSegue assign emoji as sender
+        //* added performSegue assign emoji  object as sender
         performSegue(withIdentifier: "moveSegue", sender: emojis[indexPath.row])
     }
     
@@ -59,8 +56,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //* create constant holding new view controller
         let defVC = segue.destination as! DefinitionViewController
-        //* assign sender to emoji var in new view controller
-        defVC.emoji = sender as! String
+        //* assign sender to currentEmoji var in new view controller
+        defVC.currentEmoji = sender as! Emoji
     }
     
 

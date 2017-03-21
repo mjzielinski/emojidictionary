@@ -14,68 +14,30 @@ import UIKit
 
 class DefinitionViewController: UIViewController {
     
-    //* connect emoji label to var emojilabel
+    //* emoji icon
     @IBOutlet weak var emojiLabel: UILabel!
     //* title for the emoji
     @IBOutlet weak var emojiTitle: UILabel!
     //* definition for the emoji
     @IBOutlet weak var emojiDefine: UILabel!
     
-    //* this variable gets changed in segue
-    var emoji = "No Emoji"
+    //* setup Emoji object
+    var currentEmoji = Emoji(icon: "", title: "", description: "")
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //* when the view loads, the emoji, label, and def will be set here
+        //* when the view loads the tapped Emoji object is passed
         
-        //* use the emoji variable to set emojilabel
-        emojiLabel.text = emoji
-        
-        //* use switch statement to assign title and definition
-        switch emoji {
-        case "😀":
-            emojiTitle.text = "Smiley"
-            emojiDefine.text = "Use to express happiness."
-            break
-        case "😂":
-            emojiTitle.text = "Crying Laughing"
-            emojiDefine.text = "Use when you are crying from laughter."
-            break
-        case "😅":
-            emojiTitle.text = "Sweating"
-            emojiDefine.text = "Use when you sweat in relief."
-            break
-        case "🤐":
-            emojiTitle.text = "Not Talking"
-            emojiDefine.text = "Use when you are not allowed to talk."
-            break
-        case "😎":
-            emojiTitle.text = "Cool Sunglasses"
-            emojiDefine.text = "Use when there is too much sunlight."
-            break
-        case "👽":
-            emojiTitle.text = "Alien"
-            emojiDefine.text = "Use when you see an alien or are an alien."
-            break
-        case "🤖":
-            emojiTitle.text = "Robot"
-            emojiDefine.text = "Use when you see a robot or are a robot."
-            break
-        case "👿":
-            emojiTitle.text = "Evil Purple"
-            emojiDefine.text = "Use when someone is evil and/or purple."
-            break
-        default:
-            emojiTitle.text = ""
-            emojiDefine.text = ""
-        }
-        
+        //* now get use properties from the object to replace label text
+        emojiLabel.text = currentEmoji.icon
+        emojiTitle.text = currentEmoji.title
+        emojiDefine.text = currentEmoji.description
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
+
+override func didReceiveMemoryWarning() {
+    super.didReceiveMemoryWarning()
+    // Dispose of any resources that can be recreated.
+}
+
+
 }

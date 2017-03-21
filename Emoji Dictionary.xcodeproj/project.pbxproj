@@ -13,6 +13,7 @@
 		E420AE701E803C1F00AEC57E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E420AE6F1E803C1F00AEC57E /* Assets.xcassets */; };
 		E420AE731E803C1F00AEC57E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E420AE711E803C1F00AEC57E /* LaunchScreen.storyboard */; };
 		E420AE7B1E80792F00AEC57E /* DefinitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E420AE7A1E80792F00AEC57E /* DefinitionViewController.swift */; };
+		E4269DA11E81BC720048F27F /* Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4269DA01E81BC720048F27F /* Emoji.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		E420AE721E803C1F00AEC57E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E420AE741E803C1F00AEC57E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E420AE7A1E80792F00AEC57E /* DefinitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DefinitionViewController.swift; path = ../DefinitionViewController.swift; sourceTree = "<group>"; };
+		E4269DA01E81BC720048F27F /* Emoji.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Emoji.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +42,7 @@
 		E420AE5C1E803C1F00AEC57E = {
 			isa = PBXGroup;
 			children = (
+				E4269DA01E81BC720048F27F /* Emoji.swift */,
 				E420AE671E803C1F00AEC57E /* Emoji Dictionary */,
 				E420AE661E803C1F00AEC57E /* Products */,
 			);
@@ -142,6 +145,7 @@
 			files = (
 				E420AE6B1E803C1F00AEC57E /* ViewController.swift in Sources */,
 				E420AE7B1E80792F00AEC57E /* DefinitionViewController.swift in Sources */,
+				E4269DA11E81BC720048F27F /* Emoji.swift in Sources */,
 				E420AE691E803C1F00AEC57E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,6 +312,7 @@
 				E420AE791E803C1F00AEC57E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
